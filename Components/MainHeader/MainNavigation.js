@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import classes from '@/Components/MainHeader/MainNavigation.module.css'
 import MainNavBackground from './MainNavBackground'
+import NavLink from './NavLink'
 
 const MainNavigation = () => {
   return (
@@ -17,16 +18,8 @@ const MainNavigation = () => {
 
             <nav className={classes.nav}>
                 <ul>
-                    <li>
-                        <Link href="/meals">
-                            Browse Meals
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/community">
-                            Foodies Community
-                        </Link>
-                    </li>
+                    <NavLink href='/meals'>Browse Meals</NavLink>
+                    <NavLink href='/community'>Foodies Community</NavLink>
                 </ul>
             </nav>
         </header>
