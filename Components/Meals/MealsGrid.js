@@ -1,8 +1,9 @@
 import MealItem from "./MealItem"
+import classes from './MealsGrid.module.css'
 
 const MealsGrid = ({ meals }) => {
   return (
-    <ul>
+    <ul className={classes.meals}>
         {
             meals.map(meal =>(
                 <li key={meal.id}>
