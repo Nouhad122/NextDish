@@ -17,14 +17,17 @@ const ImagePicker = ({label, name}) => {
 
         if(!file){
             setPickedImage(null);
-            return;
         }
 
-        const fileReader = new FileReader();
-        fileReader.onload = () =>{
-            setPickedImage(fileReader.result);
+        if(file){
+          const fileReader = new FileReader();
+          fileReader.onload = () =>{
+              setPickedImage(fileReader.result);
+          }
+          fileReader.readAsDataURL(file);
         }
-        fileReader.readAsDataURL(file);
+
+       
     }
  
   return (
